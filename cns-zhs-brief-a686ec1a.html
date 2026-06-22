@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杂志专题 · 世界杯入口与观赛指引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #fbe9d7 0%, #f6d1b1 50%, #edb88b 100%);
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'Songti SC', serif;
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.6;
+            color: #2c231e;
+        }
+
+        .magazine-card {
+            max-width: 860px;
+            width: 100%;
+            background-color: #fffcf7;
+            border-radius: 36px 36px 28px 28px;
+            box-shadow: 0 20px 40px -12px rgba(120, 70, 40, 0.25), 0 12px 24px -8px rgba(80, 50, 30, 0.15);
+            padding: 2.8rem 2.5rem 2.2rem;
+            transition: box-shadow 0.25s ease;
+            margin: 0.8rem 0;
+        }
+
+        .magazine-card:hover {
+            box-shadow: 0 28px 50px -14px rgba(150, 80, 40, 0.3);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #d9925b;
+            color: #fdf3ea;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin-bottom: 1.6rem;
+            box-shadow: inset 0 1px 2px rgba(255, 215, 170, 0.5);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            color: #542f1c;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            border-left: 5px solid #c07744;
+            padding-left: 1.2rem;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #7a5d48;
+            margin-top: -0.2rem;
+            margin-bottom: 2.2rem;
+            padding-left: 1.8rem;
+            font-style: italic;
+            font-weight: 400;
+            border-bottom: 1px dashed #dbb594;
+            padding-bottom: 0.6rem;
+        }
+
+        .intro-para {
+            font-size: 1.05rem;
+            margin: 1.6rem 0;
+            background: #faf3eb;
+            padding: 1.4rem 1.8rem;
+            border-radius: 24px;
+            box-shadow: inset 0 1px 4px #ede0d4;
+        }
+
+        .intro-para strong {
+            color: #7a4023;
+            font-weight: 600;
+        }
+
+        .section-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin: 2.2rem 0 1.8rem;
+        }
+
+        .section-item {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 1.6rem 1.9rem;
+            box-shadow: 0 6px 14px rgba(170, 120, 80, 0.08);
+            border: 1px solid #f2e2d2;
+            transition: transform 0.2s ease;
+        }
+
+        .section-item:hover {
+            transform: translateY(-2px);
+            border-color: #dbb594;
+        }
+
+        .section-item h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #623d26;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .section-item h2::before {
+            content: "▪";
+            color: #c07744;
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        .section-item p {
+            color: #3d2e24;
+            margin: 0.5rem 0 0;
+            font-size: 0.98rem;
+        }
+
+        .faq-brief {
+            background: #efe2d5;
+            border-radius: 24px;
+            padding: 1.6rem 1.8rem;
+            margin: 1.8rem 0 1.2rem;
+            border-left: 6px solid #b06737;
+        }
+
+        .faq-brief h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #3f2b1c;
+            margin-bottom: 0.6rem;
+        }
+
+        .faq-brief p {
+            font-size: 0.96rem;
+            color: #4f3827;
+            margin-bottom: 0.4rem;
+        }
+
+        .faq-brief .q {
+            font-weight: 600;
+            color: #623d26;
+        }
+
+        .link-sentence {
+            background: #fff8f2;
+            padding: 1.4rem 2rem;
+            border-radius: 60px;
+            text-align: center;
+            margin: 2rem 0 1.2rem;
+            font-size: 1.08rem;
+            border: 1px solid #e4cfbb;
+            box-shadow: 0 2px 8px rgba(170, 120, 80, 0.08);
+        }
+
+        .link-sentence a {
+            display: inline-block;
+            background: #b06737;
+            color: #fef7f0;
+            padding: 0.3rem 1.6rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 0.4px;
+            margin: 0 0.3rem;
+            border: 1px solid #d9925b;
+            box-shadow: 0 2px 4px rgba(90, 50, 25, 0.2);
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        .link-sentence a:hover {
+            background: #8c532e;
+            box-shadow: 0 4px 10px rgba(130, 70, 30, 0.2);
+            border-color: #b06737;
+        }
+
+        .page-footer {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #7f6653;
+            text-align: center;
+            border-top: 1px solid #e4cfbb;
+            padding-top: 1.4rem;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            letter-spacing: 0.3px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .magazine-card {
+                padding: 1.8rem 1.2rem 1.6rem;
+                border-radius: 28px;
+            }
+            h1 {
+                font-size: 1.9rem;
+                padding-left: 0.8rem;
+            }
+            .subhead {
+                font-size: 0.9rem;
+                padding-left: 1rem;
+            }
+            .intro-para {
+                padding: 1.2rem;
+                font-size: 0.98rem;
+            }
+            .section-item {
+                padding: 1.2rem 1.2rem;
+            }
+            .link-sentence {
+                padding: 1rem 1rem;
+                font-size: 0.95rem;
+                border-radius: 40px;
+            }
+            .link-sentence a {
+                padding: 0.2rem 1rem;
+                font-size: 1rem;
+            }
+            .faq-brief {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="magazine-card">
+        <div class="hero-badge">Magazine Feature · 专题</div>
+        <h1>世界聚焦 · 绿茵入口</h1>
+        <div class="subhead">一场关于热爱、仪式与稳定通道的短章</div>
+
+        <div class="intro-para">
+            <strong>四年一次的浪潮又近了。</strong> 无论你是在客厅、街边小馆还是通勤路上，那阵熟悉的欢呼总会穿透时区而来。我们整理这篇杂志式页面，不是要堆砌赛程数据，而是希望为你提供一个清晰、安静的起点——当你想要靠近那片绿茵，这里有一个始终可靠的路径。
+        </div>
+
+        <div class="section-grid">
+            <div class="section-item">
+                <h2>不只是赛事，是一种生活节拍</h2>
+                <p>从小组赛的试探到淘汰赛的屏息，<strong>世界杯</strong>早已超越体育范畴，成为全球共享的日历坐标。打开那些页面，你看到的不仅是比分，还有不同时区里同一时刻举起的手臂。我们相信，一个稳定、干净的入口，能让这份期待少一些周折，多一分从容。</p>
+            </div>
+            <div class="section-item">
+                <h2>频道特征 · 简明与温度</h2>
+                <p>无论信息流如何翻涌，始终有一条通路保持朴素与直接。不需要反复跳转，也不需要面对杂乱弹窗。<strong>世界杯</strong>相关内容在这里被组织成可读的段落，你可以像翻阅一本口袋杂志那样，从标题到段落，慢慢找到自己感兴趣的部分。我们刻意保留了白卡片与暖色，让阅读本身也成为一种仪式。</p>
+            </div>
+            <div class="section-item">
+                <h2>场景笔记 · 从客厅到指尖</h2>
+                <p>深夜独自看球时，打开页面就像打开一盏台灯；和朋友们讨论阵容时，随手翻出关键信息。页面天然适配手机与桌面，字体、间距、卡片都经过调整，不刺眼、不拥挤。哪怕只是路过，也想让你觉得——<strong>世界杯</strong>的气息就在这里，温和而确定。</p>
+            </div>
+        </div>
+
+        <div class="faq-brief">
+            <h3>📋 常见想法 · 快问快答</h3>
+            <p><span class="q">Q：需要注册或下载吗？</span> 不需要。直接通过链接访问即可浏览，所有内容均公开可读。</p>
+            <p><span class="q">Q：信息更新频率如何？</span> 保持与赛程同步，以清晰的文章形式呈现，不会有过期混杂广告的干扰。</p>
+            <p><span class="q">Q：有深度专题吗？</span> 会不定期推出球队速写、经典瞬间回顾等，适合在观赛间歇随手阅读。</p>
+        </div>
+
+        <div class="link-sentence">
+            ▸ 如果你想直接进入那个熟悉的世界，这里就是起点 —— <a href="https://cns-zhs-fifaworldcup.com">世界杯</a> —— 安静、直接、无干扰。
+        </div>
+
+        <div class="page-footer">
+            杂志专题 · 基于稳定入口与页面质感 · 世界在脚下
+        </div>
+    </div>
+</body>
+</html>
